@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Nunito', sans-serif;
+    color:white;
+}
+
+.app{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container{
+    margin-left:20px;
+    width:420px;
+    padding:30px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0 10px 40px rgba(0,0,0,.2);
+}
+
+.container h1{
+    text-align:center;
+    margin-bottom:5px;
+}
+
+.search-bar{
+    display:flex;
+    gap:12px;
+    margin-top:25px;
+}
+
+.search-input{
+    flex:1;
+
+    display:flex;
+    align-items:center;
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:0 15px;
+}
+
+.search-icon{
+    cursor:pointer;
+    color:#666;
+    font-size:18px;
+    margin-right:12px;
+    transition:.2s;
+}
+
+.search-icon:hover{
+    color:#222;
+}
+
+.search-input input{
+    flex:1;
+
+    height:52px;
+
+    border:none;
+    outline:none;
+
+    background:transparent;
+
+    font-size:16px;
+}
+
+.map-button{
+    width:55px;
+    height:52px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    transition:.25s;
+}
+
+.map-button:hover{
+    transform:scale(1.05);
+}
+.weather-card{
+    margin-top:-10px;
+    text-align:center;
+}
+
+.weather-card img{
+    width:150px;
+    margin-bottom:-10px;
+}
+
+.weather-card h1{
+    font-size:52px;
+    margin:10px 0;
+}
+
+.weather-card h2{
+    font-weight:500;
+}
+
+.weather-card h3{
+    margin-bottom:30px;
+    opacity:.8;
+}
+
+.details{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+}
+
+.detail{
+    flex:1;
+    text-align:center;
+}
+
+.detail svg{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.detail span{
+    display:block;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.detail p{
+    opacity:.7;
+    font-size:14px;
+}
+.date-time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.date,
+.time{
+    margin: 0;
+    opacity: 0.8;
+    font-size: 14px;
+}
+.forecast{
+    margin-top:30px;
+}
+
+.forecast h3{
+    text-align:center;
+    margin-bottom:15px;
+    font-weight:600;
+}
+
+.forecast-container{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+}
+
+.forecast-item{
+    flex:1;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:15px;
+
+    padding:12px 8px;
+
+    text-align:center;
+
+    backdrop-filter:blur(8px);
+
+    transition:.3s;
+}
+
+.forecast-item:hover{
+    transform:translateY(-5px);
+    background:rgba(255,255,255,.15);
+}
+
+.forecast-item img{
+    width:55px;
+}
+
+.forecast-item h4{
+    margin:5px 0;
+    font-size:20px;
+}
+
+.forecast-item span{
+    font-size:13px;
+    opacity:.8;
+}
+.search-bar{
+    margin-top:25px;
+}
+
+.weather-layout{
+    display:flex;
+    justify-content:center;
+}
+.left-panel{
+    width:420px;
+}
+
+
+.location-picker-overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.location-picker-box{
+    width: 90%;
+    max-width: 700px;
+    background: #fff;
+    color: #222;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,.3);
+}
+
+.location-picker-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #f2f2f2;
+}
+
+.close-btn{
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.confirm-location-btn{
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background: #4facfe;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.confirm-location-btn:disabled{
+    background: #ccc;
+    cursor: not-allowed;
+}
